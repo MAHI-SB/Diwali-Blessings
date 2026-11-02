@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Send a beautiful personalized Diwali blessing to someone special.">
+
+    <meta property="og:title" content="Diwali Blessing 🪔">
+    <meta property="og:description"
+        content="A little light, a lot of love, and a surprise for you!">
+
+    <title>Diwali Blessing 🪔</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="lights">✨ 🪔 ✨</div>
+
+
+    <!-- ================================= -->
+    <!-- WELCOME SCREEN -->
+    <!-- ================================= -->
+
+    <section id="welcome" class="screen">
+
+        <div class="diya">🪔</div>
+
+        <p class="eyebrow">
+            A FESTIVAL OF LOVE & LIGHT
+        </p>
+
+        <h1>Diwali Blessing</h1>
+
+        <h2>
+            Spread Light. Share Love. Send Blessings.
+        </h2>
+
+        <p class="intro">
+            This Diwali, make someone feel special.
+            Send them a little blessing and a beautiful surprise.
+        </p>
+
+        <input
+            id="sender"
+            type="text"
+            placeholder="Your name"
+            autocomplete="name"
+        >
+
+        <input
+            id="receiver"
+            type="text"
+            placeholder="Who are you blessing?"
+        >
+
+        <h3>Choose your relationship</h3>
+
+        <div class="relations">
+
+            <button
+                class="relation active"
+                data-type="family"
+                type="button"
+            >
+                🪷 Family
+            </button>
+
+            <button
+                class="relation"
+                data-type="friends"
+                type="button"
+            >
+                💗 Friends
+            </button>
+
+            <button
+                class="relation"
+                data-type="cousins"
+                type="button"
+            >
+                🧡 Cousins
+            </button>
+
+        </div>
+
+        <button
+            id="startBtn"
+            class="gold-btn"
+            type="button"
+        >
+            Enter Diwali Experience 🪔
+        </button>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- BLESSING SCREEN -->
+    <!-- ================================= -->
+
+    <section id="blessing" class="screen hidden">
+
+        <p class="eyebrow">
+            A MESSAGE FROM MY HEART
+        </p>
+
+        <div class="diya">🪔</div>
+
+        <h1 id="blessingHeading">
+            Happy Diwali!
+        </h1>
+
+        <div class="message-card">
+
+            <h2 id="relationSlogan"></h2>
+
+            <p id="blessingText"></p>
+
+            <p id="senderText"></p>
+
+        </div>
+
+        <button
+            id="giftBtn"
+            class="gold-btn"
+            type="button"
+        >
+            A Special Surprise Awaits 🎁
+        </button>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- GIFT SCREEN -->
+    <!-- ================================= -->
+
+    <section id="gift" class="screen hidden">
+
+        <p class="eyebrow">
+            SOMETHING SPECIAL FOR YOU
+        </p>
+
+        <h1>Your Diwali Gift 🎁</h1>
+
+        <p class="intro">
+            A little surprise, wrapped with love.
+        </p>
+
+        <div id="giftBox" class="gift-box">
+
+            <div class="gift-body">
+
+                <div class="vertical-ribbon"></div>
+
+                <div class="horizontal-ribbon"></div>
+
+            </div>
+
+            <div class="gift-lid">
+
+                <div class="bow"></div>
+
+            </div>
+
+        </div>
+
+        <button
+            id="openGiftBtn"
+            class="gold-btn"
+            type="button"
+        >
+            Open Your Gift ❤️
+        </button>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- PERSONAL PHOTO REVEAL SCREEN -->
+    <!-- ================================= -->
+
+    <section id="memory" class="screen hidden">
+
+        <p class="eyebrow">
+            A LITTLE MEMORY, A LOT OF LOVE
+        </p>
+
+        <h1>
+            Made Especially For You ❤️
+        </h1>
+
+        <div class="photo-frame">
+
+            <!-- PERSONAL PHOTO -->
+
+            <img
+                id="revealedPhoto"
+                alt="Your special Diwali memory"
+                loading="eager"
+                decoding="async"
+                class="hidden"
+            >
+
+            <!-- PHOTO FALLBACK -->
+
+            <div
+                id="photoFallback"
+                class="photo-fallback hidden"
+            >
+                Your special picture will appear here ❤️
+            </div>
+
+        </div>
+
+        <h2 id="memoryTitle">
+            You Are Special!
+        </h2>
+
+        <p id="memoryMessage">
+            May this Diwali bring light into your life,
+            happiness into your heart and success into your future.
+        </p>
+
+        <p class="final-wish">
+            With lots of love and warm wishes. ✨
+        </p>
+
+        <!-- WHATSAPP SHARING -->
+
+        <button
+            id="shareBtn"
+            class="whatsapp-btn"
+            type="button"
+        >
+            Share Your Diwali Surprise on WhatsApp
+        </button>
+
+        <!-- RESTART -->
+
+        <button
+            id="restartBtn"
+            class="outline-btn"
+            type="button"
+        >
+            Create Another Blessing ↻
+        </button>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- BACKGROUND MUSIC -->
+    <!-- ================================= -->
+
+    <audio
+        id="backgroundMusic"
+        loop
+        preload="auto"
+    >
+        <source
+            src="./assets/diwali-music.mp3"
+            type="audio/mpeg"
+        >
+
+        Your browser does not support audio playback.
+    </audio>
+
+
+    <!-- MUSIC CONTROL BUTTON -->
+
+    <button
+        id="musicBtn"
+        class="music-control"
+        type="button"
+        aria-label="Play or pause Diwali music"
+    >
+        ▶ Play Music
+    </button>
+
+
+    <!-- ================================= -->
+    <!-- FOOTER -->
+    <!-- ================================= -->
+
+    <footer>
+        Made with love this Diwali 🪔
+    </footer>
+
+
+    <!-- ================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================= -->
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
